@@ -1,2 +1,2 @@
-# Desafio-Dart-IMC
-Desafio de código em DART da DIO. Desenvolvever uma calculadora IMC.
+A sample command-line application with an entrypoint in `bin/`, library code
+in `lib/`, and example unit test in `test/`.
