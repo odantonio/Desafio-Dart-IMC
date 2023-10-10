@@ -3,6 +3,6 @@ import 'package:test/test.dart';
 
 void main() {
   test('calculate', () {
-    expect(calculate(), 42);
+    expect(calculateIMC(102, 1.8), equals("31.5"));
   });
 }
