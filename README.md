@@ -1,4 +1,4 @@
-# Desafio de Códogp em DART - Bootcamp Santander/DIO de Flutter #
+# Desafio de Código em DART - Bootcamp Santander/DIO de Flutter #
 
 Este é um projeto de __Calculadora de IMC__.
 
