@@ -1,37 +1,34 @@
+/// Este arquivo contém várias funções para leitura do input via console.
+///
+/// Implementações:
+///
+/// __Método Estático:__ o qual não é necessário instanciar, podemos acessar diretamente.
+/// __Try-Catch__: para tratar possíveis erros, ao invés de usar *.tryParse.*
+
 import 'dart:convert';
 import 'dart:io';
 
-/* 
-    Método Estático: não é necessário instanciar, podemos acessar diretamente.
-    
-    Implementando recuso Try-Catch para tratar possiveis erros, ao invés de usar .tryParse.
-    Também implementando funções recursivas.   
-  */
-
 class ConsoleUtils {
-/* 
-  A função abaixo pode ser usada para ler o input do console. A função apenas verifica por null.
-  Ela não recebe paramêtro: 
-*/
+  /// Função usada para ler o input do console.
+  /// A função apenas verifica por null.
+  /// Ela não recebe paramêtro:
   static String inputText() {
     var line = stdin.readLineSync(encoding: utf8);
     return line ?? "";
   }
 
-/* 
-  A função abaixo pode ser usada para ler o input do console. A função imprime na tela um texto e verifica por null. 
-  Ela recebe apenas um paramêtro: 
-    --> message é o parâmetro da mensagem que deve estar no print
-*/
+  /// Imprime na tela um texto e verifica por null.
+  /// Ela recebe apenas um paramêtro:
+  ///  ```message é o parâmetro da mensagem que deve estar no print
+  /// ```
   static String inputWithText(String message) {
     print(message);
     return inputText();
   }
 
-/* 
-  A função abaixo pode ser usada para ler o input do console e fazer a conversão do tipo string para double. A função apenas verifica por null.
-  Ela não recebe paramêtro: 
-*/
+  /// Faz a conversão do tipo string para double.
+  /// A função apenas verifica por null.
+  /// Ela não recebe paramêtro:
   static double? inputNumber() {
     var value = inputText();
     try {
@@ -41,24 +38,22 @@ class ConsoleUtils {
     }
   }
 
-/* 
-  A função abaixo pode ser usada para ler o input do console e fazer a conversão do tipo string para double. A função imprime na tela um texto e verifica por null. 
-  Ela recebe apenas um paramêtro: 
-    --> message é o parâmetro da mensagem que deve estar no print
-*/
-
+  /// Faz a conversão do tipo string para double.
+  /// A função imprime na tela um texto e verifica por null, usando a _inputNumber_
+  /// Ela recebe apenas um paramêtro:
+  /// ```message é o parâmetro da mensagem que deve estar no print
+  /// ```
   static double? inputNumberWithText(String message) {
     print(message);
     return inputNumber();
   }
 
-/* 
-  A função abaixo pode ser usada para ler o input do console e fazer a verificação de valores não desejados. Neste caso, a função deve ser usada para converter strings para valores numéricos, e descarta entradas indesejados que não são numericas. 
-  Ela recebe dois paramêtros: 
-    --> message é o parâmetro da mensagem que deve estar no print
-    --> validation é a string que encerra a execução do código, definida em código ao chamar esta função. 
-*/
-
+  /// Faz a verificação de valores não desejados.
+  /// A função converte strings para valores double, e descarta entradas indesejados não numericas.
+  /// Ela recebe dois paramêtros:
+  /// ```message é o parâmetro da mensagem que deve estar no print
+  /// validation é a string que encerra a execução do código, definida em código ao chamar esta função.
+  /// ```
   static double? inputWithNumberValidation(String message, String validation) {
     do {
       try {
