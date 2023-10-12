@@ -13,8 +13,8 @@ class ConsoleUtils {
   /// A função apenas verifica por null.
   /// Ela não recebe paramêtro:
   static String inputText() {
-    var line = stdin.readLineSync(encoding: utf8);
-    return line ?? "";
+    var line = stdin.readLineSync(encoding: utf8) ?? "";
+    return line;
   }
 
   /// Imprime na tela um texto e verifica por null.
@@ -29,12 +29,12 @@ class ConsoleUtils {
   /// Faz a conversão do tipo string para double.
   /// A função apenas verifica por null.
   /// Ela não recebe paramêtro:
-  static double? inputNumber() {
+  static double inputNumber() {
     var value = inputText();
     try {
       return double.parse(value);
     } catch (e) {
-      return null;
+      return 0;
     }
   }
 
@@ -60,6 +60,26 @@ class ConsoleUtils {
         var line = inputWithText(message);
         if (line == validation) {
           return null;
+        }
+        return double.parse(line);
+      } catch (e) {
+        print(message);
+      }
+    } while (true);
+  }
+
+  /// Faz a verificação de valores não desejados.
+  /// A função converte strings para valores double, e descarta entradas indesejados não numericas e se a entrada for nula, descarta e espera por uma entrada numérica.
+  /// Ela recebe um paramêtros:
+  /// ```message é o parâmetro da mensagem que deve estar no print
+  /// ```
+  static double inputWithNumberVerification(String message) {
+    do {
+      try {
+        var line = inputWithText(message);
+        if (line == "") {
+          return inputWithNumberVerification(
+              "Número invalido, digite novamente:");
         }
         return double.parse(line);
       } catch (e) {

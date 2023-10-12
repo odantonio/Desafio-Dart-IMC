@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="input library API docs, for the Dart programming language.">
-  <title>input library - Dart API</title>
+  <meta name="description" content="API docs for the personalData function from the desafio_dart_imc library, for the Dart programming language.">
+  <title>personalData function - desafio_dart_imc library - Dart API</title>
 
 
   
@@ -29,9 +29,10 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">desafio_dart_imc</a></li>
-    <li class="self-crumb">input library</li>
+    <li><a href="../desafio_dart_imc/desafio_dart_imc-library.html">desafio_dart_imc</a></li>
+    <li class="self-crumb">personalData function</li>
   </ol>
-  <div class="self-name">input</div>
+  <div class="self-name">personalData</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -52,38 +53,39 @@
   <div
       id="dartdoc-main-content"
       class="main-content"
-      data-above-sidebar=""
-      data-below-sidebar="utils_input&#47;utils_input-library-sidebar.html">
-      
+      data-above-sidebar="desafio_dart_imc&#47;desafio_dart_imc-library-sidebar.html"
+      data-below-sidebar="">
       <div>
-<h1><span class="kind-library">input</span> library 
+<h1><span class="kind-function">personalData</span> function 
  
 </h1></div>
 
+    <section class="multi-line-signature">
+        
+
+<span class="returntype">void</span>
+<span class="name ">personalData</span>(<wbr>)
+
+        
+
+    </section>
     
 
 
-    <section class="summary offset-anchor" id="classes">
-      <h2>Classes</h2>
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void personalData() {
+  var nome = ConsoleUtils.inputWithText(&quot;Digite seu nome:&quot;);
+  var peso = ConsoleUtils.inputNumberWithText(&quot;Informe seu peso em Kg:&quot;);
+  var altura =
+      ConsoleUtils.inputNumberWithText(&quot;Informe sua altura em metros:&quot;);
 
-      <dl>
-        <dt id="ConsoleUtils">
-  <span class="name "><a href="../utils_input/ConsoleUtils-class.html">ConsoleUtils</a></span> 
+  var imc = calculateIMC(peso!, altura!);
 
-</dt>
-<dd>
-  Método Estático: não é necessário instanciar, podemos acessar diretamente.
-</dd>
-
-      </dl>
-    </section>
-
-
-
-
-
-
-
+  print(&quot;$nome: $imc&quot;);
+}</code></pre>
+</section>
 
 
   </div> <!-- /.main-content -->
@@ -98,24 +100,16 @@
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">desafio_dart_imc</a></li>
-    <li class="self-crumb">input library</li>
+    <li><a href="../desafio_dart_imc/desafio_dart_imc-library.html">desafio_dart_imc</a></li>
+    <li class="self-crumb">personalData function</li>
 </ol>
 
 
-    <h5><span class="package-name">desafio_dart_imc</span> <span class="package-kind">package</span></h5>
-    <ol>
-      <li class="section-title">Libraries</li>
-      <li><a href="../desafio_dart_imc/desafio_dart_imc-library.html">desafio_dart_imc</a></li>
-      <li><a href="../utils_input/utils_input-library.html">input</a></li>
-      <li><a href="../class_person/class_person-library.html">person</a></li>
-      <li><a href="../person_exception/person_exception-library.html">person_exception</a></li>
-</ol>
-
-  </div>
+    <h5>desafio_dart_imc library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-    <h5>input library</h5>
-  </div><!--/sidebar-offcanvas-right-->
+  </div><!--/.sidebar-offcanvas-->
 
 </main>
 

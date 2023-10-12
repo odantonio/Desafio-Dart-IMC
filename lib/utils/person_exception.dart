@@ -3,12 +3,12 @@
 // Exception é uma classe INTERFACE (abstract interface class), por isso usamos implements.
 // Apesar de não estar sendo usado no código, a classe foi criada para fins didáticos e uso futuro.
 // Este tratamento customizado das exceções é útil para identificar onde o motivo do erro ter acontecido.
-class NewPersonException implements Exception {
-  String error() => "Invalid Input";
+class MyExceptionError implements Exception {
+  String error() => "Nome Inválido";
 
   @override
   String toString() {
-    String message = "NewPersonException: ${error()}";
+    String message = "MyExceptionError: ${error()}";
     return message;
   }
 }

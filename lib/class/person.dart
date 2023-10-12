@@ -6,8 +6,8 @@
 // Encapsulamento <- em dart, variáveis iniciadas com _ são "privadas".
 class Person {
   String _name = "";
-  String _weight = "";
-  String _height = "";
+  double _weight = 0;
+  double _height = 0;
 
   // # Construtor
   //
@@ -18,7 +18,7 @@ class Person {
   //   }
   //
   // Utilizando o construtor da classe, precisamos passar todos os parâmetros das instâncias obrigatórias.
-  Person(String nome, String peso, String altura) {
+  Person(String nome, double peso, double altura) {
     _name = nome;
     _weight = peso;
     _height = altura;
@@ -29,11 +29,11 @@ class Person {
     _name = name;
   }
 
-  void setWeight(String weight) {
+  void setWeight(double weight) {
     _weight = weight;
   }
 
-  void setHeight(String height) {
+  void setHeight(double height) {
     _height = height;
   }
 
@@ -42,11 +42,11 @@ class Person {
     return _name;
   }
 
-  String getWeight() {
+  double getWeight() {
     return _weight;
   }
 
-  String getHeight() {
+  double getHeight() {
     return _height;
   }
 
@@ -55,6 +55,6 @@ class Person {
   // Criamos um método, que retorna um MAP, para que os valores das variáveis sejam recuperados, de uma única vez, já devidamente formatados.
   @override
   String toString() {
-    return {"Nome": _name, "Telefone": _weight, "Endereço": _height}.toString();
+    return {"Nome": _name, "Peso": _weight, "Altura": _height}.toString();
   }
 }
