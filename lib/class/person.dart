@@ -25,8 +25,8 @@ class Person {
   }
 
   //Setter, como as variáveis instanciáveis não existem fora do escopo da classe, é preciso criar um método para acessar.
-  void setName(String name) {
-    _name = name;
+  void setName(String nome) {
+    _name = nome;
   }
 
   void setWeight(double weight) {
